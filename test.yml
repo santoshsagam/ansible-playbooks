@@ -1,0 +1,11 @@
+- name: Test play to get server hostname
+  hosts: new
+  tasks:
+     - name: Get server hostname
+       command: hostname
+       register: result
+        
+     - name: Print the command output
+       debug:
+         msg: The hostname for the server is {{ result.stdout }}
+         
