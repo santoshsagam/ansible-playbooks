@@ -1,5 +1,5 @@
 - name: Test play to get server hostname
-  hosts: new
+  hosts: all
   tasks:
      - name: Get server hostname
        command: hostname
